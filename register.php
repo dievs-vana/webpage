@@ -1,3 +1,12 @@
+<?php
+include_once ("classes/User.php");
+$user = new User();
+if($_SERVER["REQUEST_METHOD"]== 'POST' && isset($_POST['user_register'])){
+    
+    $insertUser = $user->createUserAccount($_POST);
+}
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -62,7 +71,7 @@
                         <small id="t_error" class="form-text text-muted"></small>
   
                         </div>
-                        <button type="submit" name="user_register" class="btn btn-primary" style="background-color: rgb(99, 17, 25);"><i class="fa fa-user">&nbsp;</i>Register</button>
+                        <button type="submit" name="user_register" class="btn btn-primary"><i class="fa fa-user">&nbsp;</i>Register</button>
                         <span><a href="index.php">Login</a></span>
                     </form>
                 </div>
