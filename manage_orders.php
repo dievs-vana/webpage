@@ -32,7 +32,7 @@ if(!isset($_SESSION['userlogin'])){
              <div class="row">
                  <div class="col-md-12">
                      <div class="card" style="background-color: whitesmoke;">
-                         <h3 class="text-center" style="font-family: cursive">Order Records</h3>
+                         <h3 class="text-center" style="font-family: sans-serif">Order Records</h3>
 
                          <div class="card-body">
 
@@ -82,14 +82,14 @@ if(!isset($_SESSION['userlogin'])){
              </tbody>
              <tfoot>
                  <tr class="badge-info text-center">
-                     <td></td>
-                     <td></td>
-                     <td></td>
-                     <td></td>   
-                     <td></td>
-                     <td></td>
-                     <td></td>
-                     <td></td>
+                     <td bgcolor="#990000"></td>
+                     <td bgcolor="#990000"></td>
+                     <td bgcolor="#990000"></td>
+                     <td bgcolor="#990000"></td>   
+                     <td bgcolor="#990000"></td>
+                     <td bgcolor="#990000"></td>
+                     <td bgcolor="#990000"></td>
+                     <td bgcolor="#990000"></td>
                  </tr>
              </tfoot>
          </table>  

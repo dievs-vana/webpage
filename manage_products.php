@@ -89,7 +89,7 @@ if(isset($_GET['delpr'])){
              $i++;
              ?>
             <tr class="delete_pro<?php echo $result['pId']; ?>">
-                <td><?php echo $result['pId']; ?></td>
+                <td ><?php echo $result['pId']; ?></td>
                 <td><?php echo $result['product_name']; ?></td>
                 <td><?php echo $result['category_name']; ?></td>
                 <td><?php echo $result['retail_price']; ?></td>
