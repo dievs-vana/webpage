@@ -38,13 +38,32 @@ if(!isset($_SESSION['userlogin'])){
             <div class="row">
             <div class="col-md-4">
                 <div class="card mx-auto">
-                    <img src="images/svcc_log2.png" style="width: 60%" class="card-img-top mx-auto" alt="...">
+                    <img src="images/svcc_log2.png" style="width: 50%" class="card-img-top mx-auto" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Current Account</h5>
                         <p class="card-text"><i class="fa fa-user">&nbsp;</i><?php echo $_SESSION['uName'];?></p>
                         <p class="card-text"><i class="fa fa-user">&nbsp;</i><?php echo $_SESSION['uType'];?></p>
                         <p class="card-text"><i class="fa fa-clock-o">&nbsp;</i>Last Login : <?php echo $_SESSION['last_login']; ?></p>
+                        
+                        <div class="card mb-3">
+                            <a data-toggle="modal" data-target="#form_category" class="btn btn-outline-primary"  style="background-color: rgb(96, 0, 0);">Patient List</a>
+                        </div
+                        <br>
+                        <div class="card mb-3">
+                            <a data-toggle="modal" data-target="#form_brand" class="btn btn-outline-primary"  style="background-color: rgb(96, 0, 0);">Clinic Archive</a>
+                        </div
+                        <br> 
+                        <div class="card mb-3">
+                            <a data-toggle="modal" data-target="#form_product" class="btn btn-outline-primary"  style="background-color: rgb(96, 0, 0);">Manage Clinic</a>
+                        </div
+                        <br>
+                        <div class="card mb-3">
+                            <a data-toggle="modal" data-target="#form_product" class="btn btn-outline-primary"  style="background-color: rgb(96, 0, 0);">Patient Diagnosis</a>
+                        </div
+                        <br>
+                        <div class="card mb-3">
                         <a href="setting.php" class="btn btn-primary" style="background-color: rgb(96, 0, 0);"><i class="fa fa-edit">&nbsp;</i>Settings</a>
+</div>
                     </div>
                 </div>
             </div>
@@ -52,7 +71,7 @@ if(!isset($_SESSION['userlogin'])){
                 <div class="jumbotron" style="width: 100%;height: 100%">
                     <div class="row">
                         <div class="col-sm-4">
-                            <div class="card mb-3" style="background-color: rgb(96, 0, 0);">
+                            <div class="card mb-3"  class="card mb-3"style="background-color: rgb(96, 0, 0);">
                                 <p class="card-header">
                                     <a href="manage_products.php" style="text-decoration:none;color:white;">
                                         Total Patient<span class="badge badge-light float-right">
@@ -65,7 +84,7 @@ if(!isset($_SESSION['userlogin'])){
                             </div>
                         </div>
                         <div class="col-sm-4"> 
-                          <div class="cardmb-3" style="background-color: rgb(96, 0, 0);">
+                          <div class="card mb-3" style="background-color: rgb(96, 0, 0);">
                                 <p class="card-header">
                                     <a href="manage_orders.php" style="text-decoration:none;color:white;">
                                         Total Students<span class="badge badge-light float-right">
