@@ -33,7 +33,7 @@ if(!isset($_SESSION['userlogin'])){
      <body>
          <?php include_once("templates/header.php");?>
          <br>
-         <div class="container" style="background-color: rgb(96, 0, 0);">
+         <div class="container max-h-full" style="background-color: rgb(96, 0, 0);">
              <br>
             <div class="row">
             <div class="col-md-4">
@@ -63,58 +63,24 @@ if(!isset($_SESSION['userlogin'])){
                         <br>
                         <div class="card mb-3">
                         <a href="setting.php" class="btn btn-primary" style="background-color: rgb(96, 0, 0);"><i class="fa fa-edit">&nbsp;</i>Settings</a>
-</div>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-8">
-                <div class="jumbotron" style="width: 100%;height: 100%">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="card mb-3"  class="card mb-3"style="background-color: rgb(96, 0, 0);">
-                                <p class="card-header">
-                                    <a href="manage_products.php" style="text-decoration:none;color:white;">
-                                        Total Patient<span class="badge badge-light float-right">
-                                        <?php
-                                        if($products){
-                                        echo mysqli_num_rows($products);
-                                        }else{ echo 0;}?></span>				   
-                                    </a>                                 
-                                </p>
-                            </div>
                         </div>
-                        <div class="col-sm-4"> 
-                          <div class="card mb-3" style="background-color: rgb(96, 0, 0);">
-                                <p class="card-header">
-                                    <a href="manage_orders.php" style="text-decoration:none;color:white;">
-                                        Total Students<span class="badge badge-light float-right">
-                                        <?php
-                                        if($orders){
-                                        echo mysqli_num_rows($orders);
-                                        }else{ echo 0;}?>  
-                                        </span>				   
-                                    </a>                                 
-                                </p>
-                            </div>  
+                            </div>
+                                </div>
                             
-                        </div>
-                        <div class="col-sm-4">
-                             <div class="card mb-3" style="background-color: rgb(96, 0, 0);">
-                                <p class="card-header">
-                                    <a href="manage_products.php" style="text-decoration:none;color:white;">
-                                        Healthy Students<span class="badge badge-light float-right">
-                                        <?php 
-                                        if($stocks){
-                                        echo mysqli_num_rows($stocks);
-                                        }else{ echo 0;}?>   
-                                        </span>				   
-                                    </a>                                 
-                                </p>
+                                <!-- chart -->
+                                <div class="col-md-8">
+                                    <div class="jumbotron" style="width: 100%;height: 70%">
+                                        <div class="row">
+                                        <div class="card-body">
                             </div>
-                        </div>
-                        
-                    </div>
-                    <br>
+                            <div class="card-body">
+                            <center><p>Getting started with chart Js | Chart Js Course</p><center>
+                            <div>
+                                <canvas id="myChart"></canvas>
+                            </div>
+
+                            <br>
                     <div class="row">
                         
                         <div class="col-sm-4">
@@ -125,7 +91,7 @@ if(!isset($_SESSION['userlogin'])){
                   
                             
                         <div class="card text-white bg-dark mb-3">
-                                <div class="card-header text-center">Average Clinic Cost</div>
+                                <div class="card-header text-center">Average Sale Value</div>
                                 <div class="card-body text-center ">
                                     <h5><?php
                                     
@@ -143,53 +109,97 @@ if(!isset($_SESSION['userlogin'])){
                         <div class="col-sm-4">
                             <div class="card">
                                 <div class="card-body">
-                                    <h5 class="card-title">Register</h5>
-                                    <p class="card-text">Create new fill-up form</p>
+                                    <h5 class="card-title">Orders</h5>
+                                    <p class="card-text">Create new transaction</p>
                                     <a href="new_orders.php" class="btn btn-sm btn-outline-primary">New</a>
-                                    <a href="manage_orders.php" class="btn btn-sm btn-outline-secondary">Log-in History</a>
+                                    <a href="manage_orders.php" class="btn btn-sm btn-outline-secondary">Order History</a>
 
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Categories</h5>
-                            <p class="card-text">Here you can manage your categories and add new categories</p>
-                            <a href="#" data-toggle="modal" data-target="#form_category" class="btn btn-outline-primary">Add</a>
-                            <a href="manage_categories.php" class="btn btn-outline-success">Manage</a>
-                        </div>
-                    </div> 
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Students</h5>
-                            <p class="card-text">Here you can manage your students and add new enrolly</p>
-                            <a href="#" data-toggle="modal" data-target="#form_brand" class="btn btn-outline-primary">Add</a>
-                            <a href="manage_brands.php" class="btn btn-outline-success">Manage</a>
+
+
+
+
+                            </div>
+                            </div>
+                       
+                            <div class="row">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                            <h5 class="card-title">Categories</h5>
+                                            <p class="card-text">Here you can manage your categories and add new categories</p>
+                                            <a href="#" data-toggle="modal" data-target="#form_category" class="btn btn-outline-primary">Add</a>
+                                        <a href="manage_categories.php" class="btn btn-outline-success">Manage</a>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Students</h5>
+                                        <p class="card-text">Here you can manage your students and add new enrolly</p>
+                                        <a href="#" data-toggle="modal" data-target="#form_brand" class="btn btn-outline-primary">Add</a>
+                                        <a href="manage_brands.php" class="btn btn-outline-success">Manage</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Patients</h5>
+                                        <p class="card-text">Here you can manage your patients and add new patients</p>
+                                        <!-- <a href="#" data-toggle="modal" data-target="#form_product" class="btn btn-outline-primary">Add</a> -->
+                                        <a href="manage_products.php" class="btn btn-outline-success">Manage</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Patients</h5>
-                            <p class="card-text">Here you can manage your patients and add new patients</p>
-                            <!-- <a href="#" data-toggle="modal" data-target="#form_product" class="btn btn-outline-primary">Add</a> -->
-                            <a href="manage_products.php" class="btn btn-outline-success">Manage</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+                    
          
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const labels = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+  ];
+
+  const data = {
+    labels: labels,
+    datasets: [{
+      label: 'My First dataset',
+      backgroundColor: 'rgb(0, 99, 132)',
+      borderColor: 'rgb(0, 99, 132)',
+      data: [0, 10, 5, 2, 20, 1, 41],
+    }]
+  };
+
+  const config = {
+    type: 'line',
+    data: data,
+    options: {}
+  };
+</script>
+
+<script>
+  const myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  );
+</script>
+
+
          <?php
          // form_category
          include_once ("templates/category.php");?>
