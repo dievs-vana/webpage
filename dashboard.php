@@ -46,7 +46,7 @@ if(!isset($_SESSION['userlogin'])){
                         <p class="card-text"><i class="fa fa-clock-o">&nbsp;</i>Last Login : <?php echo $_SESSION['last_login']; ?></p>
                         
                         <div class="card mb-3">
-                            <a data-toggle="modal" data-target="#form_category" class="btn btn-outline-primary"  style="background-color: rgb(96, 0, 0);">Patient List</a>
+                            <a data-toggle="modal" data-target="#form_patient" class="btn btn-outline-primary"  style="background-color: rgb(96, 0, 0);">Patient List</a>
                         </div
                         <br>
                         <div class="card mb-3">
@@ -209,6 +209,10 @@ if(!isset($_SESSION['userlogin'])){
          <?php
          // form_product
          include_once ("templates/product.php");?>
+         <?php
+         // form_patient
+         include_once ("templates/patient.php");?>
+         
     </body>
 </html>
 <?php }?>

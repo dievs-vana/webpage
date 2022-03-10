@@ -56,23 +56,7 @@ if(isset($_GET['delbr'])){
                      <td bgcolor="#990000"><b>Action</b></td>
                  </tr>
              </thead>
-             <tbody>
-             <?php
-             if($brands){
-             $i = 0;
-             while ($result = $brands->fetch_assoc()) {
-             $i++;
-             ?>
-            <tr class="delete_br<?php echo $result['bId']; ?>">
-                <td><?php echo $i;?></td>
-                <td><?php echo $result['brand_name']; ?></td>
-                <td><a href="#" class="btn btn-success btn-sm">Active</a></td>
-                <td>
-                    <a href="#" did="<?php echo $result['bId']; ?>" class="btn btn-outline-danger btn-sm"><i class="fa fa-trash">&nbsp;</i>Delete</a> 
-                    <a href="#" data-toggle="modal" data-target="#update_brand" eid="<?php echo $result['bId']; ?>" class="btn btn-outline-info btn-sm edit_br"><i class="fa fa-edit">&nbsp;</i>Edit</a> 
-                </td>                                      
-            </tr>
-             <?php }} ?>
+             <tbody id="brandTbody">
              </tbody>
              <tfoot>
                  <tr class="btn-danger text-center">
@@ -112,12 +96,36 @@ if(isset($_GET['delbr'])){
           <?php include_once("templates/update_brand.php")?>
 
           <script>
-          $(document).ready(function(){
-                 $('#example').DataTable();
-           });
+            $(document).ready(function(){
+                
+                $.ajax({
+                    url: "../webpage/api/brand/getBrands.php",
+                    method: "GET",
+                    success: function(data) {
+                        $("#brandTbody").html('');
+                        var results = JSON.parse(data);
+                        var htmlArray = [];
+                        for (const result of results) {
+                            htmlArray.push("<tr>");
+                            htmlArray.push("<td>"+ result.bId +"</td>");
+                            htmlArray.push("<td>"+ result.brand_name +"</td>");
+                            htmlArray.push("<td>"+ result.status +"</td>");
+                            htmlArray.push("<td>");
+                            htmlArray.push("</td>");
+                        }
+                        $("#brandTbody").html(htmlArray.join(''));
+                    }
+
+                    
+                });
+                
+                
+            });
           </script>
              
      </body>
 </html>
 <?php }?>
-
+<script>
+   
+</script>

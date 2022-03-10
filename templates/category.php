@@ -1,10 +1,10 @@
 
 <!-- Modal -->
-<div class="modal fade" id="form_category" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="padding:150px;">
+<div class="modal fade" id="form_category" tabindex="-2" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="padding:150px;">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Add New Category</h5>
+            <div class="modal-header" style="background-color: rgb(96, 0, 0);">
+                <h5 class="modal-title" id="exampleModalLabel"><font color="#FFFF00">Add Patient</font></h5>
                 
 
                     
@@ -14,10 +14,10 @@
                 <form id="cat_form" onsubmit="return false">
                     <div class="tab-bx">
         <div class="tab-btn-bx">
-            <button class="tab-btn" onclick="showPan(0,'#1abc9c')">Basic Information</button>
-            <button class="tab-btn" onclick="showPan(1,'#74b9ff')">Medical History</button>
-            <button class="tab-btn" onclick="showPan(2,'#ff7675')">Physical Examination</button>
-            <button class="tab-btn" onclick="showPan(3,'#a29bfe')">Diagnosis Treatment</button>
+            <button class="tab-btn" onclick="showPan(0)">Basic Information</button>
+            <button class="tab-btn" onclick="showPan(1)">Medical History</button>
+            <button class="tab-btn" onclick="showPan(2)">Physical Examination</button>
+            <button class="tab-btn" onclick="showPan(3)">Diagnosis Treatment</button>
            
         </div>
         <div class="tab-ctn-bx">
@@ -25,7 +25,7 @@
          
             <h3>Billing Address</h3>
             &nbsp;<label for="StudentID"><i class="fa fa-user"></i> STUDENT ID:</label>
-            <input type="text" id="StudentID" name="StudentID" placeholder="Student ID">
+            <input type="text" id="StudentId" name="StudentId" placeholder="Student ID">
             
           
                     <label>COURSE:</label>
@@ -138,6 +138,10 @@
                 <input type="text" id="zip" name="zip" placeholder="10001">    
             </div>
          
+            <center>
+                <button id="addPatient" type="submit" class="btn btn-primary">Add</button>
+
+            </center>
         </div>
     </div>
     <script src="js/tab.js"></script>
@@ -160,9 +164,31 @@
 </script>
                 </form>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <div class="modal-footer" style="background-color: rgb(96, 0, 0);">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>              
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    <script>
+  $("#addPatient").click(function() {
+      var StudentId = $("input[name=StudentId]").val();
+      $.ajax({
+          url: "../webpage/api/patient/addPatient.php",
+          method: "POST",
+          data: {
+            brand_name: StudentId,
+            status: 1
+          },
+          success: function(data) {
+            alert('salamat hesus at byernes ulit');
+          },
+          error: function(data) {
+            alert('salamat hudas at byernes ulit');
+          }
+      });
+  });
+</script>
+</script>
