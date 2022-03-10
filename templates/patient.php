@@ -18,8 +18,12 @@
           <!-- <small id="brand_error" class="form-text text-muted"></small> -->
           <label>SCHOOL YEAR</label>
           <input type="text" name="school_year" class="form-control" id="school_year" placeholder="Enter Year">
-          <label>FULL NAME</label>
-          <input type="text" name="full_name" class="form-control" id="full_name" placeholder="Enter Full Name">
+          <label>FIRST NAME</label>
+          <input type="text" name="first_name" class="form-control" id="first_name" placeholder="Enter Full Name">
+          <label>MIDDLE NAME</label>
+          <input type="text" name="middle_name" class="form-control" id="middle_name" placeholder="Enter Full Name">
+          <label>LAST NAME</label>
+          <input type="text" name="last_name" class="form-control" id="last_name" placeholder="Enter Full Name">
           <label>BIRTHDAY</label>
           <input type="date" name="birth_date" class="form-control" id="birth_date" placeholder="Enter Birthday">
           <label>ADDRESS</label>
@@ -43,7 +47,7 @@
 
                 <label>NATIONALITY:</label>
                 <select id="nationality" name="nationality" required="">
-                      <option selected="selected" value="-1">-- select one --</option>
+                      <option selected="selected">-- select one --</option>
                       <option value="afghan">Afghan</option>
                       <option value="albanian">Albanian</option>
                       <option value="algerian">Algerian</option>
@@ -239,13 +243,13 @@
                 </select>
 
           <label>RELIGION</label>
-          <input type="text" name="religion" class="form-control" id="religion" placeholder="Enter Age">
+          <input type="text" name="relihiyon" class="form-control" id="relihiyon" placeholder="Enter Religion">
           <label>PERSON TO BE NOTIFY IN CASE OF EMERGENCY</label>
-          <input type="text" name="emergency_guardian" class="form-control" id="emergency_guardian" placeholder="Enter brand">
+          <input type="text" name="emergency_guardian" class="form-control" id="emergency_guardian" placeholder="Enter Guardian">
           <label>RELATIONSHIP</label>
-          <input type="text" name="relation_ship" class="form-control" id="relation_ship" placeholder="Enter Age">
+          <input type="text" name="relation_ship" class="form-control" id="relation_ship" placeholder="Enter Relationship">
           <label>GUARDIAN CONTACT.</label>
-          <input type="number" name="emergency_contact" class="form-control" id="emergency_contact" placeholder="Enter brand">
+          <input type="number" name="emergency_contact" class="form-control" id="emergency_contact" placeholder="Enter Guardian No.">
             
 
           </div>
@@ -270,7 +274,9 @@
       var studentId = $("input[name=student_id]").val();
       var Course = $("input[name=course]").val();
       var schoolYear = $("input[name=school_year]").val();
-      var fullName = $("input[name=full_name]").val();
+      var firstName = $("input[name=first_name]").val();
+      var middleName = $("input[name=middle_name]").val();
+      var lastName = $("input[name=last_name]").val();
       var birthDate = $("input[name=birth_date]").val();
       var Address = $("input[name=addRess]").val();
       var mobileNo = $("input[name=mobileno]").val();
@@ -278,7 +284,7 @@
       var Gender = $("input[name=gender]").val();
       var maritalStatus = $("select[name=marital_status]").val();
       var Nationality = $("select[name=nationality]").val();
-      var Religion = $("input[name=religion]").val();
+      var Relihiyon = $("input[name=relihiyon]").val();
       var emergencyGuardian = $("input[name=emergency_guardian]").val();
       var relationShip = $("input[name=relation_ship]").val();
       var emergencyContact = $("input[name=emergency_contact]").val();
@@ -291,7 +297,9 @@
             student_id: studentId,
             course: Course,
             school_year: schoolYear,
-            full_name: fullName,
+            first_name: firstName,
+            middle_name: middleName,
+            last_name: lastName,
             birth_date: birthDate,
             addRess: Address,
             mobileno: mobileNo,
@@ -299,7 +307,7 @@
             gender: Gender,
             marital_status: maritalStatus,
             nationality: Nationality,
-            religion: Religion,
+            relihiyon: Relihiyon,
             emergency_guardian: emergencyGuardian,
             relation_ship: relationShip,
             emergency_contact: emergencyContact,

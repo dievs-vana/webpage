@@ -46,7 +46,7 @@ if(!isset($_SESSION['userlogin'])){
                         <p class="card-text"><i class="fa fa-clock-o">&nbsp;</i>Last Login : <?php echo $_SESSION['last_login']; ?></p>
                         
                         <div class="card mb-3">
-                            <a data-toggle="modal" data-target="#form_patient" class="btn btn-outline-primary"  style="background-color: rgb(96, 0, 0);">Patient List</a>
+                            <a href="manage_patient.php" class="btn btn-outline-primary"  style="background-color: rgb(96, 0, 0);">Patient List</a>
                         </div
                         <br>
                         <div class="card mb-3">
@@ -132,7 +132,7 @@ if(!isset($_SESSION['userlogin'])){
                                     <div class="card-body">
                                             <h5 class="card-title">Categories</h5>
                                             <p class="card-text">Here you can manage your categories and add new categories</p>
-                                            <a href="#" data-toggle="modal" data-target="#form_category" class="btn btn-outline-primary">Add</a>
+                                            <a href="#" data-toggle="modal" data-target="#form_patient" class="btn btn-outline-primary">Add</a>
                                         <a href="manage_categories.php" class="btn btn-outline-success">Manage</a>
                                     </div>
                                 </div> 
