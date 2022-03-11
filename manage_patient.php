@@ -60,7 +60,7 @@ if(isset($_GET['delbr'])){
                      <td bgcolor="#990000"><b>ACTION</b></td>
                  </tr>
              </thead>
-             <tbody id="brandTbody">
+             <tbody id="patientTbody">
              </tbody>
              <tfoot>
                  <tr class="btn-danger text-center">
@@ -110,7 +110,7 @@ if(isset($_GET['delbr'])){
                     url: "../webpage/api/patient/getPatient.php",
                     method: "GET",
                     success: function(data) {
-                        $("#brandTbody").html('');
+                        $("#patientTbody").html('');
                         var results = JSON.parse(data);
                         var htmlArray = [];
                         for (const result of results) {
@@ -127,7 +127,8 @@ if(isset($_GET['delbr'])){
                             htmlArray.push("</td>");
                         }
 
-                        $("#brandTbody").html(htmlArray.join(''));
+                        $("#patientTbody").html(htmlArray.join(''));
+                        
         
                     }
 

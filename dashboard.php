@@ -18,7 +18,7 @@ if(!isset($_SESSION['userlogin'])){
 <!DOCTYPE html>
 <html>
     <head>
-    <link rel="icon" type="image/png" href="images/icon.ico" sizes="16x16">
+    <link rel="icon" type="image/png" href="images/icon.ico" sizes="16x16" >
         <title>Svcc Clinic System</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />    
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -30,15 +30,13 @@ if(!isset($_SESSION['userlogin'])){
         
         <script src="js/main.js"></script>
      </head>
-     <body>
+     <body style="background-color: #FFFFF6;">
          <?php include_once("templates/header.php");?>
-         <br>
-         <div class="container max-h-full" style="background-color: rgb(96, 0, 0);">
-             <br>
+        
             <div class="row">
-            <div class="col-md-4">
-                <div class="card mx-auto">
-                    <img src="images/svcc_log2.png" style="width: 50%" class="card-img-top mx-auto" alt="...">
+            <div style="width: 23%; height: 90%" style="background-color: #FFFFF6;">
+                <div class="card mx-auto" >
+                    <img src="images/svcc_log2.png" style="width: 50%" class="card-img-top mx-auto" alt="..." >
                     <div class="card-body">
                         <h5 class="card-title">Current Account</h5>
                         <p class="card-text"><i class="fa fa-user">&nbsp;</i><?php echo $_SESSION['uName'];?></p>
@@ -67,65 +65,27 @@ if(!isset($_SESSION['userlogin'])){
                         </div>
                             </div>
                                 </div>
-                            
-                                <!-- chart -->
                                 <div class="col-md-8">
-                                    <div class="jumbotron" style="width: 100%;height: 70%">
+                                    <div class="" style="width: 100%;height: 80%">
                                         <div class="row">
                                         <div class="card-body">
-                            </div>
-                            <div class="card-body">
+                            
+                                <!-- chart -->
+                               
+                    </div>
+                        <div class="card-body">
                             <center><p>Getting started with chart Js | Chart Js Course</p><center>
                             <div>
                                 <canvas id="myChart"></canvas>
                             </div>
-
+                        </div>
+                    </div>
                             <br>
-                    <div class="row">
-                        
-                        <div class="col-sm-4">
-                        <iframe src="https://free.timeanddate.com/clock/i6u7be96/n5100/szw160/szh160/cf100/hnce1ead6" frameborder="0" width="160" height="160"></iframe>
-
-                        </div>
-                        <div class="col-sm-4">
-                  
-                            
-                        <div class="card text-white bg-dark mb-3">
-                                <div class="card-header text-center">Average Sale Value</div>
-                                <div class="card-body text-center ">
-                                    <h5><?php
-                                    
-                                    if($totalRevenue){
-                                       $total=0;
-                                        while($result = $totalRevenue->fetch_assoc()){
-                                            $total = $total+$result['paid'];
-                              
-                                        }
-                                         
-                                    echo '₱'.' '.number_format($total, 2);}else{echo '₱'.' '.'0';} ?></h5>
-                                </div>
-                        </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Orders</h5>
-                                    <p class="card-text">Create new transaction</p>
-                                    <a href="new_orders.php" class="btn btn-sm btn-outline-primary">New</a>
-                                    <a href="manage_orders.php" class="btn btn-sm btn-outline-secondary">Order History</a>
-
-                                </div>
+               
                             </div>
                         </div>
                     </div>
-                </div>
-
-
-
-
-                            </div>
-                            </div>
-                       
+<br>    
                             <div class="row">
                             <div class="col-md-4">
                                 <div class="card">
