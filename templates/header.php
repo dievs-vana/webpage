@@ -1,5 +1,5 @@
 <nav style="background-color: rgb(59,0,5); background: linear-gradient(90deg, rgba(59,0,5,1) 0%, rgba(121,9,9,1) 44%, rgba(247,255,0,1) 100%);"  class="navbar navbar-expand-lg navbar-dark d-flex">
-<img src="images/svcc_log2.png" style="width: 5%" class="card-img-top mx-auto" alt="..."> 
+<img href="../dashboard.php" src="images/svcc_log2.png" style="width: 5%" class="card-img-top mx-auto" alt="..." > 
        
 <font size="3" color="#FFFF00">
 <strong>St.Vincent College of Cabuyao<br><font size="2" color="#FFFFFF">Mamatid, Cabuyao City, Laguna</font></strong>

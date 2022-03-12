@@ -1,15 +1,12 @@
 <?php 
     require '../../config/dbConfig.php';
 
-    $sql = "SELECT * FROM patient";
+    $patient_id = $_GET['patientId'];
+
+    $sql = "SELECT * FROM patient WHERE pId=" . $patient_id;
     $result = $conn->query($sql);
-    $results = array();
 
-    while($row = $result->fetch_assoc()) {
-        array_push($results, $row);
-    }
-
-    echo json_encode($results);
+    echo json_encode($result->fetch_assoc());
     
     mysqli_close($conn);
 ?>

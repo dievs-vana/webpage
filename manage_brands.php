@@ -125,7 +125,7 @@ if(isset($_GET['delbr'])){
              
      </body>
 </html>
-<?php }?>
+<?php ?>
 <script>
    
 </script>
