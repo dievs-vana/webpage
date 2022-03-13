@@ -29,7 +29,7 @@
           <label>ADDRESS</label>
           <input type="text" name="addRess" class="form-control" id="addRess" placeholder="Enter Address">
           <label>MOBILE NO.</label>
-          <input type="number" name="mobileno" class="form-control" id="mobileno" placeholder="Enter Mobile No.">
+          <input type="number" name="mobile_no" class="form-control" id="mobile_no" placeholder="Enter Mobile No.">
           <label>AGE</label>
           <input type="number" name="year_old" class="form-control" id="year_old" placeholder="Enter Age">
          
@@ -271,52 +271,52 @@
 
 <script>
   $("#addStudent").click(function() {
-      var studentId = $("input[name=student_id]").val();
-      var Course = $("input[name=course]").val();
-      var schoolYear = $("input[name=school_year]").val();
-      var firstName = $("input[name=first_name]").val();
-      var middleName = $("input[name=middle_name]").val();
-      var lastName = $("input[name=last_name]").val();
-      var birthDate = $("input[name=birth_date]").val();
-      var Address = $("input[name=addRess]").val();
-      var mobileNo = $("input[name=mobileno]").val();
-      var yearOld = $("input[name=year_old]").val();
-      var Gender = $("input[name=gender]").val();
-      var maritalStatus = $("select[name=marital_status]").val();
-      var Nationality = $("select[name=nationality]").val();
-      var Relihiyon = $("input[name=relihiyon]").val();
-      var emergencyGuardian = $("input[name=emergency_guardian]").val();
-      var relationShip = $("input[name=relation_ship]").val();
-      var emergencyContact = $("input[name=emergency_contact]").val();
+      var student_id = $("input[name=student_id]").val();
+      var course = $("input[name=course]").val();
+      var school_year = $("input[name=school_year]").val();
+      var first_name = $("input[name=first_name]").val();
+      var middle_name = $("input[name=middle_name]").val();
+      var last_name = $("input[name=last_name]").val();
+      var birth_date = $("input[name=birth_date]").val();
+      var addRess = $("input[name=addRess]").val();
+      var mobile_no = $("input[name=mobile_no]").val();
+      var year_old = $("input[name=year_old]").val();
+      var gender = $("input[name=gender]").val();
+      var marital_status = $("select[name=marital_status]").val();
+      var nationality = $("select[name=nationality]").val();
+      var relihiyon = $("input[name=relihiyon]").val();
+      var emergency_guardian = $("input[name=emergency_guardian]").val();
+      var relation_ship = $("input[name=relation_ship]").val();
+      var emergency_contact = $("input[name=emergency_contact]").val();
 
       
       $.ajax({
           url: "../webpage/api/patient/addPatient.php",
           method: "POST",
           data: {
-            student_id: studentId,
-            course: Course,
-            school_year: schoolYear,
-            first_name: firstName,
-            middle_name: middleName,
-            last_name: lastName,
-            birth_date: birthDate,
-            addRess: Address,
-            mobileno: mobileNo,
-            year_old: yearOld,
-            gender: Gender,
-            marital_status: maritalStatus,
-            nationality: Nationality,
-            relihiyon: Relihiyon,
-            emergency_guardian: emergencyGuardian,
-            relation_ship: relationShip,
-            emergency_contact: emergencyContact,
+            student_id: student_id,
+            course: course,
+            school_year: school_year,
+            first_name: first_name,
+            middle_name: middle_name,
+            last_name: last_name,
+            birth_date: birth_date,
+            addRess: addRess,
+            mobile_no: mobile_no,
+            year_old: year_old,
+            gender: gender,
+            marital_status: marital_status,
+            nationality: nationality,
+            relihiyon: relihiyon,
+            emergency_guardian: emergency_guardian,
+            relation_ship: relation_ship,
+            emergency_contact: emergency_contact,
             
 
 
           },
           success: function(data) {
-            alert('salamat hesus at byernes ulit');
+                            getPatients();
           },
           error: function(data) {
             alert('shit hudas at byernes ulit');

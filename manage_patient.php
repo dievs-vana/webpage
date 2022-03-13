@@ -318,6 +318,7 @@
                 </div>
             </div>
         </div>
+       
         <script>
             $(document).ready(function() {
                 var patient_id;
