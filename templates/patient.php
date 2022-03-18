@@ -316,10 +316,10 @@
 
           },
           success: function(data) {
-                            getPatients();
+            alert('salamat hesus at byernes ulit');
           },
           error: function(data) {
-            alert('shit hudas at byernes ulit');
+            alert('salamat hudas at byernes ulit');
           }
       });
   });

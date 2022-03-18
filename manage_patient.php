@@ -18,11 +18,12 @@
         <br>
         <div class="container">
             <div class="row">
+            <a href="#" data-toggle="modal" data-target="#form_patient" class="btn btn-outline-primary">Add</a>
                 <div class="col-md-12">
                     <div class="card" style="background-color: whitesmoke;">
                         <h3 class="text-center" style="font-family: cursive">All Brands</h3>
                         <div class="card-body">
-                        <a href="#" data-toggle="modal" data-target="#form_patient" class="btn btn-outline-primary">Add</a>
+                       
                             <table class="table table-striped table-bordered table-condensed table-hover text-center" id="example">
                                 <thead>
                                     <tr class="btn-danger text-center">
